@@ -17,8 +17,8 @@ class Usuarios extends Model
     ];
     protected $hidden   = ["created_at", "updated_at"];
 
-    public function empleado(){
-        return $this->belongsTo(Empleado::class,'fk_empleado','id');
+    public function empleados(){
+        return $this->belongsTo(Empleados::class,'fk_empleado','id');
     }
-    
+
 }

@@ -18,7 +18,7 @@ class Empleados extends Model
     public $table = 'empleados';
 
     public function usuarios(){
-        return $this->belongsTo(Usuario::class,'id','fk_empleado');
+        return $this->belongsTo(Usuarios::class,'id','fk_empleado');
     }
     
 }
