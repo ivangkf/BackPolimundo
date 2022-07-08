@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Empleados extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nombre',
+        'direccion',
+        'telefono'
+    ];
+    protected $hidden   = ["created_at", "updated_at"];
+    public $table = 'empleados';
+
+    public function usuarios(){
+        return $this->belongsTo(Usuario::class,'id','fk_empleado');
+    }
+    
 }
